@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <title>form</title>
+     
+</head>
+<body>
+    <div class="form">
+     <h1>SignUp</h1>
+     <hr>
+     <label class="Username"><b>Username:</b></label>
+    <input type="text" placeholder="Username" id="username"><br>
+
+
+    <label class="Email"><b>Email:</b></label>
+    <input type="email" placeholder="Email" id="email" ><br>
+
+    <input type="radio"  name="option" value="Male" 
+    id="male"><a>Male</a>
+    <input type="radio"  name="option" value="Female"
+     id="female"><a>Female</a><br>
+    
+    <button class="submit" id="submitbtn">Submit</button>
+    </div>
+</body>
+</html>
+
+
+<script>
+
+    document.getElementById("submitbtn").addEventListener("click", function(){
+
+        var Username = document.getElementById("username").value
+
+        var Email = document.getElementById("email").value
+        
+        if(Username === ''){
+            alert('The Username field is empty');
+        }else if(Email === ''){
+            alert('The Email field is empty');
+        }
+        else{
+            alert('hello')
+        }
+
+        if(document.getElementById("male").checked){
+            return true
+        }else if(document.getElementById("female").checked){
+            return true
+        }else{
+            alert('Please select a gender')
+        }
+
+        
+         
+         
+           
+    })
+
+</script> 
